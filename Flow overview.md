@@ -45,7 +45,6 @@
       - STNK
       - BPKB
         nb: data indent akan terload otomatis jika sepeda motor sudah datang
-
 11. Kasir
     - Terima uang dari konsumen sesuai data sales database
     - Tipe pembayaran (langsung/kirim tagih)
@@ -69,7 +68,14 @@
     - Uang yang tercetak di kwitansi ***(sub total)*** belum termasuk diskon
 12. BSTK
     - Hanya bisa dicetak sesudah mendapat approval dari ADH (status *outstanding* berubah menjadi *deliver*)
-13. STNK dan BPKB
+13. Penagihan Leasing
+    - Penagihan dilakukan setelah BSTK keluar
+    - Yang dilampirkan adalah BSTK dan kwitansi
+14. Leasing
+    - Semua data ditarik untuk dimasukan ke tools monitoring, sebaugai acuan ntuk melakukan penagihan.
+    - HO melakukan matching sesuai data dari finance dengan cara memilih konsumen atau sesuai data unit(noka nosin)
+    - Accounting matching di rekening koran
+15. STNK dan BPKB
     - Input faktur astra
     - Data STNK di input
     - Memilih data sales/tx yang akan di buatkan STNK dan BPKB
@@ -88,3 +94,23 @@
       - No sales
       STNK dan BPKB jadi
       - hanya di input di Assist
+    - Membuat pengajuan biaya biro jasa notice/unotice (pengajuan notice belum bisa dilakukan jika unotice belum di proses)
+    - Finance melakukan pembayaran lalu di input di rekening koran
+    - Accounting menginput data dari finance sesuai pengajuan dari cabang
+    - Lalu muncul jurnal
+    - Accounting matching di rekening koran
+16. Piutang cash
+    - Mengecek data kas dari kasir
+    - Matching di rekening koran
+      - Jika konsumen melakukan pembayaran cash maka rekening koran melalui penyetoran bank oleh kasir
+      - Jika konsumen melakukan tf maka rekening korannya sesuai transaksi tersebut
+
+## Dashboard
+
+- Total unit
+- Total unit credit
+- Total unit cash
+- Piutang cash (Beli motor cash belum bayar/kirim tagih)
+- Piutang credit (DP motor credit yang belu di bayar)
+- Piutang leasing
+- Piutang join promo
